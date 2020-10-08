@@ -1,13 +1,15 @@
 {
-  "name": "test-api",
+  "name": "ec-kidz-school-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "EC utbildning school website API",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node src/app.ts'",
+    "start": "npm run build && node ./build/app.js",
+    "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node src/app.ts'",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Nasim Mahzoun",
   "license": "MIT",
   "dependencies": {
     "concurrently": "^2.2.0",
